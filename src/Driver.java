@@ -5,7 +5,7 @@ public class Driver {
      * @param args
      */
     public static void main(String[] args) {
-        int howCloselyMatchesInput = 7;
+        int howCloselyMatchesInput = 8;
         String[] input = {howCloselyMatchesInput+"", "10000", "input.txt"};
         TextGenerator.main(input);
     }
