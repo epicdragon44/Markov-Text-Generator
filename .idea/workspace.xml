@@ -104,9 +104,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="987" />
-    <option name="y" value="18" />
-    <option name="width" value="934" />
+    <option name="x" value="986" />
+    <option name="y" value="17" />
+    <option name="width" value="935" />
     <option name="height" value="1060" />
   </component>
   <component name="ProjectView">
@@ -135,7 +135,8 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
