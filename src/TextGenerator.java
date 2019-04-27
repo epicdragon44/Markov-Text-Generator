@@ -1,6 +1,7 @@
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Map.Entry;
 
@@ -53,16 +54,23 @@ public class TextGenerator {
         }
 
         StringBuilder origFileBuffer = new StringBuilder();
+        boolean skip = false;
         while (Character.isDefined(next)) {
-            Character.toString(next);
-            origFileBuffer.append(next);
-            try {
-                next = (char) reader.read();
-            } catch (IOException e) {
-                System.out.println("IOException in stepping through the file");
-                e.printStackTrace();
+            if (skip) continue;
+            else {
+                skip = false;
+                Character.toString(next);
+                origFileBuffer.append(next);
+                try {
+                    char[] punctuation = {'.', ',', '\'', '\"', '(', ')', '!', '&', '$', '@', '#', '*', '%', '+', '-', '?', '>', '<'};
+                    next = (char) reader.read();
+                    if (Arrays.binarySearch(punctuation, next) == -1)
+                        skip = true;
+                } catch (IOException e) {
+                    System.out.println("IOException in stepping through the file");
+                    e.printStackTrace();
+                }
             }
-
         }
         String origFile = origFileBuffer.toString();
         String firstSub = origFile.substring(0, k);
